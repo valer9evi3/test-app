@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Answer from './Answer';
-import { ITest } from '../Interfaces';
+import { IQestAnswer } from '../Interfaces';
 import Button from './Button';
-import { render } from '@testing-library/react';
 
 let selectedAnswers: string[] = [];
-const testInt: ITest[] = [
+const arrQestAnswer: IQestAnswer[] = [
   {
     id: 0,
     questions: 'Сколько вам лет?',
@@ -37,12 +36,12 @@ export const Card: React.FC = () => {
   const [position, setPosition] = useState(0);
 
   function changePosition(): void {
-    if (testInt[position].id + 1 < testInt.length) {
+    if (arrQestAnswer[position].id + 1 < arrQestAnswer.length) {
       setPosition((prev) => prev + 1);
     }
   }
 
-  testInt[testInt.length - 1].answers = selectedAnswers;
+  arrQestAnswer[arrQestAnswer.length - 1].answers = selectedAnswers;
 
   return (
     <div className="row">
@@ -50,19 +49,24 @@ export const Card: React.FC = () => {
         <div className="card blue-grey darken-1">
           <div className="card-content white-text">
             <span className="card-title">
-              {testInt[position].id + 1}. {testInt[position].questions}
+              {arrQestAnswer[position].id + 1}.{' '}
+              {arrQestAnswer[position].questions}
             </span>
             <p className="right-align">
-              {testInt[position].id + 1} из {testInt.length}
+              {arrQestAnswer[position].id + 1} из {arrQestAnswer.length}
             </p>
           </div>
         </div>
         <Answer
-          answers={testInt[position].answers}
+          answers={arrQestAnswer[position].answers}
           changePosition={changePosition}
           selected={selectedAnswers}
         />
-        {testInt[position].id + 1 === testInt.length ? <Button /> : <></>}
+        {arrQestAnswer[position].id + 1 === arrQestAnswer.length ? (
+          <Button />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

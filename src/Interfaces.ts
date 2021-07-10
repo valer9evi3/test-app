@@ -4,7 +4,7 @@ export interface AnswerProps {
   selected: string[];
 }
 
-export interface ITest {
+export interface IQestAnswer {
   id: number;
   answers: string[];
   questions: string;
