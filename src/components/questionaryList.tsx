@@ -1,4 +1,4 @@
-import { IQuestionary, IQuestionaryProps } from '../Interfaces';
+import { IQuestionary } from '../Interfaces';
 
 const questionaryList: IQuestionary[] = [
   {

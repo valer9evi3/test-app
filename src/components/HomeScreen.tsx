@@ -1,4 +1,4 @@
-import { IQuestionary, IQuestionaryProps } from '../Interfaces';
+import { IQuestionaryProps } from '../Interfaces';
 
 function HomeScreen(props: IQuestionaryProps) {
   const { changeState } = props;

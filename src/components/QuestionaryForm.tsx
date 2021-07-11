@@ -1,7 +1,6 @@
-import React from 'react';
 import AnswersList from './AnswersList';
 import TitleForm from './TitleForm ';
-import { IQuestionary, IQuestionaryProps } from '../Interfaces';
+import { IQuestionaryProps } from '../Interfaces';
 
 function QuestionaryForm(props: IQuestionaryProps) {
   const { questionary, changeState, length, selectedAsnwer } = props;

@@ -1,4 +1,4 @@
-import { IQuestionary, IQuestionaryProps } from '../Interfaces';
+import { IQuestionaryProps } from '../Interfaces';
 
 function TitleForm(props: IQuestionaryProps) {
   const { questionary, changeState, length } = props;

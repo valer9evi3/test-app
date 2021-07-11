@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import QuestionaryForm from './components/QuestionaryForm';
 import TotalForm from './components/TotalForm';
 import HomeScreen from './components/HomeScreen';
 import questionaryList from './components/questionaryList';
-import { IQuestionary, IQuestionaryProps } from './Interfaces';
+import { IQuestionary } from './Interfaces';
 
 const selectedAsnwer: IQuestionary = {
   id: questionaryList.length + 1,

@@ -1,4 +1,4 @@
-import { IQuestionary, IQuestionaryProps } from '../Interfaces';
+import { IQuestionaryProps } from '../Interfaces';
 
 function AnswersList(props: IQuestionaryProps) {
   const { questionary, changeState, selectedAsnwer } = props;
