@@ -4,10 +4,15 @@ function HomeScreen(props: IQuestionaryProps) {
   const { changeState } = props;
   return (
     <div className="row">
-      <div className="col s6 m6">
+      <div className="col s1 m4">
         <div className="card white darken-1">
           <div className="card-content">
-            <h4>Ответьте на вопросы анкеты</h4>
+            <span className="card-title center-align">Анкета</span>
+            <p className="center-align">
+              Ответьте, пожалуйста, на все вопросы.
+            </p>
+          </div>
+          <div className="card-action">
             <a
               className="waves-effect waves-light btn-large"
               onClick={changeState}

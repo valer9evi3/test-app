@@ -7,7 +7,7 @@ function QuestionaryForm(props: IQuestionaryProps) {
   const { questionary, changeState, length, selectedAsnwer } = props;
   return (
     <div className="row">
-      <div className="col s12 m6">
+      <div className="col s1 m4">
         <TitleForm
           questionary={questionary}
           changeState={changeState}
