@@ -1,11 +1,12 @@
-export interface AnswerProps {
-  answers: string[];
-  changePosition(): void;
-  selected: string[];
-}
-
-export interface IQestAnswer {
+export interface IQuestionary {
   id: number;
   answers: string[];
-  questions: string;
+  question: string;
+}
+
+export interface IQuestionaryProps {
+  questionary: IQuestionary;
+  changeState: () => void;
+  length: number;
+  selectedAsnwer: IQuestionary;
 }
