@@ -2,6 +2,10 @@ import AnswersList from './AnswersList';
 import TitleForm from './TitleForm ';
 import { IQuestionaryProps } from '../Interfaces';
 
+function getVoid() {
+  return;
+}
+
 function TotalForm(props: IQuestionaryProps) {
   const { questionary, changeState, length, selectedAsnwer } = props;
   return (
@@ -15,7 +19,7 @@ function TotalForm(props: IQuestionaryProps) {
         />
         <AnswersList
           questionary={questionary}
-          changeState={changeState}
+          changeState={getVoid}
           length={length}
           selectedAsnwer={selectedAsnwer}
         />

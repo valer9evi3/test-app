@@ -5,7 +5,7 @@ import HomeScreen from './components/HomeScreen';
 import questionaryList from './components/questionaryList';
 import { IQuestionary } from './Interfaces';
 
-const selectedAsnwer: IQuestionary = {
+let selectedAsnwer: IQuestionary = {
   id: questionaryList.length + 1,
   answers: [],
   question: 'Итого',
@@ -22,7 +22,14 @@ function App() {
   }
 
   function resetState() {
-    if (!endQuestions()) setState(0);
+    if (!endQuestions()) {
+      setState(0);
+      selectedAsnwer = {
+        id: questionaryList.length + 1,
+        answers: [],
+        question: 'Итого',
+      };
+    }
   }
 
   function endQuestions() {
